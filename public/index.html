@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujju's Search Engine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles */
+        .result-item {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-item a {
+            color: #1a0dab;
+            font-size: 18px;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .result-item a.url-link {
+            font-size: 14px;
+            color: green;
+        }
+
+        .result-item p {
+            margin: 5px 0;
+            color: #545454;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Mujju's Search Engine</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="searchQuery" class="form-control" placeholder="Enter your search query" aria-label="Search Query">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="performSearch()">Search</button>
+            </div>
+        </div>
+        <div id="loadingIndicator" class="loading" style="display:none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div id="resultsContainer"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
